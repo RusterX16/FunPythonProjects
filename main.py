@@ -39,9 +39,27 @@ def rock_paper_scissors():
         print("Shame on you ! You lost")
 
 
+def guess_the_number(length):
+    n = randint(0, length)
+    found = False
+
+    guess = input("Guess the number !\n")
+
+    while not found:
+        if int(guess) == n:
+            found = True
+        else:
+            if int(guess) > n:
+                guess = input("Less\n")
+            else:
+                guess = input("More\n")
+    print("Well done ! The number to guess was " + str(n))
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # print_hi('PyCharm')
-    rock_paper_scissors()
+    # rock_paper_scissors()
+    guess_the_number(20)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
